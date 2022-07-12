@@ -1,0 +1,19 @@
+{% extends 'todo_app/layout.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="form">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">To Do Item Name</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mow Lawn">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Item Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Remember to charge mower batteries!!"></textarea>
+        </div>
+        <button class="btn btn-outline-dark btn-create-todo">Submit</button>
+    </div>
+</div>
+
+{% endblock %}
