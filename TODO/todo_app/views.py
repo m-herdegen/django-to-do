@@ -6,7 +6,11 @@ from .models import Todo
 
 # Create your views here.
 def index(request):
-    return HttpResponse('hi')
+    todos = Todo.objects.all()
+    context = {
+        'todos' : todos
+    }
+    return render(request, 'todo_app/index.html', context)
 
 def new_todo(request):
     return render(request, 'todo_app/form.html')

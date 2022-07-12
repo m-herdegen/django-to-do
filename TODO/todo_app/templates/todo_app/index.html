@@ -1,0 +1,18 @@
+{% extends 'todo_app/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    {% for todo in todos %}
+    <div class="col-lg-4">
+        <div class="my-card todo">
+            <h6>{{todo.title}}</h6>
+            <hr>
+            <p>{{todo.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
